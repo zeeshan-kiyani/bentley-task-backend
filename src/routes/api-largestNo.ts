@@ -3,9 +3,10 @@ const status =  require('../common/status-code')
 const router = require('express-promise-router')();
 const { Request, Response }=require('express');
 const getLargestNo = (req:Request,res:Response) =>{
-    const input_array: number[] = req.body.input_array; 
+    const input_array: number[] = req.body.input_array;
     let first:number,second:number;
-    first = second  = input_array[0];
+    first  =  input_array[0];
+    second = 0;
     input_array.map(value =>{
         if(first < value){
             second = first;
